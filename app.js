@@ -86,11 +86,23 @@
   
   var app = angular.module('gemStore', []);
   
-  app.controller('StoreController', function(){
+  app.controller('StoreController', ['$http',function($http){
+    var store = this;
+    store.products = [];
     
-    this.products = gems;
+//    http://dhg7upb7j7jqa.cloudfront.net/store-products.json
+//    http://127.0.0.1/site_git/store-products.json
     
-  });
+    $http
+      .get('http://127.0.0.1/site_git/store-products.json')
+      .success(function(data) {
+        store.products = data;
+      })
+      .error(function() {
+        alert('Les données n\'ont pas pu être récupérées!!');
+    });
+    
+  }]);
     
   app.controller('TabController', TabCtrl);
   
