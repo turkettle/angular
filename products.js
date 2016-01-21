@@ -55,6 +55,8 @@
       controllerAs: "gallery"
     };
   });
+  
+  app.directive();
 
   
 })();
