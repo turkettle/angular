@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html ng-app="gemStore">
+<html ng-app="aston">
   <head>
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="gemStore/gemStore/css/application.css" />
+    <link rel="stylesheet" type="text/css" href="aston/gemStore/gemStore/css/application.css" />
     <script type="text/javascript" src="../vendor/angular.min.js"></script>
-    <script type="text/javascript" src="gemStore/gemStore/app.js"></script>
-    <script type="text/javascript" src="gemStore/products/products.js"></script>
+    <script type="text/javascript" src="../vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="aston/app.js"></script>
+    <script type="text/javascript" src="aston/gemStore/gemStore/app.js"></script>
+    <script type="text/javascript" src="aston/gemStore/products/products.js"></script>
     <meta charset="utf-8" />
   </head>
   <body>
@@ -14,26 +16,17 @@
     <header>
       <h1 class="text-center">Flatlander Crafted Gems</h1>
       <h2 class="text-center">– an Angular store –</h2>
+      
+      <nav id="main-menu">
+        <ul class="nav nav-pills">
+          <li class="active"><a href="/site_git/app/#/">Home</a></li>
+          <li><a href="/site_git/app/#/holidays">Holidays</a></li>
+        </ul>
+      </nav>
+      
     </header>
     
-    <div ng-controller="StoreController as store">
-      
-      <div class="product row list-group-item" ng-repeat="product in store.products">
-        <h3>
-          {{product.name}}
-          <em class="pull-right">{{product.price | currency}}</em>
-        </h3>
-        
-        <!-- Image Gallery  -->
-        <product-gallery>
-        </product-gallery>
-        
-        <product-tabs>
-        </product-tabs>
-        
-        
-      </div>
-            
-    </div>
+    <div ng-view></div>
+    
   </body>
 </html>

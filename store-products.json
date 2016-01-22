@@ -32,9 +32,9 @@
     "color": "#EEE",
     "faces": 12,
     "images": [
-      "gemStore/gemStore/images/gem-01.gif",
-      "gemStore/gemStore/images/gem-03.gif",
-      "gemStore/gemStore/images/gem-04.gif"
+      "images/gem-01.gif",
+      "images/gem-03.gif",
+      "images/gem-04.gif"
     ],
     "reviews": [
       {
@@ -60,9 +60,9 @@
     "color": "#000",
     "faces": 6,
     "images": [
-      "gemStore/gemStore/images/gem-06.gif",
-      "gemStore/gemStore/images/gem-07.gif",
-      "gemStore/gemStore/images/gem-10.gif"
+      "images/gem-06.gif",
+      "images/gem-07.gif",
+      "images/gem-10.gif"
     ],
     "reviews": [
       {

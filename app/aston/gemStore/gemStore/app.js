@@ -1,6 +1,8 @@
 (function(){ 
   
-  var app = angular.module('gemStore', ['store-directives']);
+  var app = angular.module('gemStore', [
+    'store-directives'
+  ]);  
   
   app.controller('StoreController', ['$http',function($http){
     var store = this;
@@ -15,7 +17,6 @@
       .get('http://127.0.0.1/site_git/store-products.json')
       .success(function(data) {
         store.products = data;
-        console.log(store.products);
       })
       .error(function() {
         alert('Les données n\'ont pas pu être récupérées!!');
