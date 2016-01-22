@@ -37,6 +37,30 @@
     
   }]);
   
+  app.directive('mainMenu', function() {
+    
+    
+    return {
+      restrict: 'E',
+      templateUrl: 'aston/templates/main-menu.html',
+      controller: function($scope) {
+
+        $scope.page = 'home';
+
+        this.setPage = function(newPage) {
+          $scope.page = newPage;
+        };
+
+        this.isSet = function(currentPage) {
+          return $scope.page === currentPage;
+        };
+
+      },
+      controllerAs: 'menuCtrl'
+    };
+    
+  });
+  
   
   
   

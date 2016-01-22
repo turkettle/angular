@@ -1,0 +1,15 @@
+<nav id="main-menu">
+
+  <ul class="nav nav-pills">
+  
+    <li ng-class="{active: menuCtrl.isSet('home')}">
+      <a href="/site_git/app/#/" ng-click="menuCtrl.setPage('home')">Home</a>
+    </li>
+    
+    <li ng-class="{active: menuCtrl.isSet('holidays')}">
+      <a href="/site_git/app/#/holidays" ng-click="menuCtrl.setPage('holidays')">Holidays</a>
+    </li>
+    
+  </ul>
+  
+</nav>
