@@ -3,7 +3,7 @@
   var app = angular.module('aston', [
     'ngRoute',
     'gemStore',
-//    'holidays',
+    'holidays',
   ]);
   
   app.config(['$routeProvider', function($routeProvider) {
@@ -17,14 +17,14 @@
           controllerAs: 'store',
         }
       )
-//      .when(
-//        '/holidays',
-//        {
-//          templateUrl: '',
-//          controller: '',
-//          controllerAs: '',
-//        }
-//      )
+      .when(
+        '/holidays',
+        {
+          templateUrl: 'aston/holidays/holidays/templates/holidays-list.html',
+          controller: 'holidaysListController',
+          controllerAs: 'listCtrl',
+        }
+      )
       .when(
         '/404',
         {

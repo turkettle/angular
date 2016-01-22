@@ -1,0 +1,8 @@
+
+<h3>Liste des jours fériés</h3>
+
+<ul>
+  <li ng-repeat="holiday in listCtrl.list track by $index" class="list-group-item">
+    {{holiday[0].date | date}} - {{holiday[0].name}}
+  </li>
+</ul>
